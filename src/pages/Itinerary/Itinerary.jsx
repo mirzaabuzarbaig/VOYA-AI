@@ -49,6 +49,7 @@ import {
   getLatestCostPrediction,
   optimizeTrip,
 } from '../../services/api';
+import config from '../../config/api';
 import LoadingSpinner from '../../components/shared/LoadingSpinner';
 import EmptyState from '../../components/shared/EmptyState';
 import { formatCurrency } from '../../utils/format';
@@ -243,7 +244,7 @@ export default function Itinerary() {
         const dur = Math.max(1, Math.round(((new Date(itinerary?.endDate || Date.now())) - (new Date(itinerary?.startDate || Date.now()))) / (1000 * 60 * 60 * 24)) + 1);
         const b = Number(itinerary?.budget) || 50000;
         try {
-          const mlRes = await fetch('http://localhost:8000/predict', {
+          const mlRes = await fetch(`${config.mlServiceUrl}/predict`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

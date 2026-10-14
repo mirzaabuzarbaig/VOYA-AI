@@ -14,10 +14,20 @@ logging.basicConfig(
 )
 logger = logging.getLogger("ml_service")
 
+from fastapi.middleware.cors import CORSMiddleware
+
 app = FastAPI(
     title="VoyaAI Trip Cost Prediction Service",
     description="Dedicated Machine Learning service predicting total trip costs using trained regression pipelines.",
     version=MODEL_VERSION
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 from fastapi.encoders import jsonable_encoder
