@@ -1,0 +1,155 @@
+/* Backend Status Indicator (Developer Verification Tool) */
+.backend-status-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999;
+  background: rgba(13, 28, 24, 0.94);
+  border: 1px solid rgba(80, 200, 120, 0.3);
+  border-radius: var(--radius-lg, 12px);
+  padding: 10px 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(16px);
+  color: #FAF7F2;
+  font-family: var(--font-sans, system-ui, sans-serif);
+  font-size: 0.8rem;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.backend-status__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.backend-status__title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.backend-status__icon {
+  color: var(--color-rainforest-emerald, #50C878);
+}
+
+.backend-status__title {
+  font-weight: 700;
+  font-size: 0.825rem;
+  letter-spacing: 0.02em;
+}
+
+.backend-status__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.backend-status__dot--online {
+  background: #50C878;
+  box-shadow: 0 0 8px #50C878;
+}
+
+.backend-status__dot--offline {
+  background: #f59e0b;
+  box-shadow: 0 0 8px #f59e0b;
+}
+
+.backend-status__actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.backend-status__btn-icon {
+  background: transparent;
+  border: none;
+  color: #9DB5AC;
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: color 0.2s ease;
+}
+
+.backend-status__btn-icon:hover {
+  color: #FAF7F2;
+}
+
+.backend-status__btn-icon--spin {
+  animation: spin 1s linear infinite;
+}
+
+.backend-status__btn-close {
+  background: transparent;
+  border: none;
+  color: #718880;
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 2px;
+}
+
+.backend-status__btn-close:hover {
+  color: #FAF7F2;
+}
+
+.backend-status__body {
+  border-top: 1px solid rgba(80, 200, 120, 0.15);
+  padding-top: 6px;
+}
+
+.backend-status__detail {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #C5DDD4;
+  font-size: 0.75rem;
+}
+
+.backend-status__badge {
+  margin-left: auto;
+  background: rgba(80, 200, 120, 0.2);
+  color: #50C878;
+  font-weight: 700;
+  font-size: 0.68rem;
+  padding: 1px 6px;
+  border-radius: 9999px;
+  border: 1px solid rgba(80, 200, 120, 0.35);
+}
+
+.backend-status-minimized {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999;
+  background: rgba(13, 28, 24, 0.94);
+  border: 1px solid rgba(80, 200, 120, 0.3);
+  border-radius: 9999px;
+  padding: 8px 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  color: var(--color-rainforest-emerald, #50C878);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.backend-status-minimized:hover {
+  transform: scale(1.05);
+  border-color: #50C878;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

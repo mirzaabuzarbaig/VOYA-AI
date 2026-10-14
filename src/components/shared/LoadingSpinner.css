@@ -1,0 +1,22 @@
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-12) var(--space-6);
+}
+
+.loading-spinner__icon {
+  animation: spin 1s linear infinite;
+  color: var(--color-primary-500);
+}
+
+.loading-spinner__message {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.loading-spinner--sm { padding: var(--space-4); }
+.loading-spinner--lg { padding: var(--space-20); }

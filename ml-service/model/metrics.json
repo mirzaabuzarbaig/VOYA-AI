@@ -1,0 +1,41 @@
+{
+  "dataset_size": 1500,
+  "train_samples": 1200,
+  "test_samples": 300,
+  "models_evaluated": {
+    "LinearRegression": {
+      "MAE": 11184.63,
+      "RMSE": 18776.57,
+      "R2": 0.9741
+    },
+    "RandomForestRegressor": {
+      "MAE": 11325.0,
+      "RMSE": 19484.42,
+      "R2": 0.9721
+    },
+    "GradientBoostingRegressor": {
+      "MAE": 10620.55,
+      "RMSE": 19874.5,
+      "R2": 0.971
+    }
+  },
+  "selected_model": "LinearRegression",
+  "selected_model_metrics": {
+    "MAE": 11184.63,
+    "RMSE": 18776.57,
+    "R2": 0.9741
+  },
+  "model_version": "cost-model-v1",
+  "numeric_features": [
+    "duration_days",
+    "travelers",
+    "budget",
+    "month"
+  ],
+  "categorical_features": [
+    "destination",
+    "accommodation",
+    "transport",
+    "trip_type"
+  ]
+}

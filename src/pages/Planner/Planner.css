@@ -1,0 +1,387 @@
+/* ═══════════════════════════════════════════════════════════
+   Trip Planner Page Styles
+   ═══════════════════════════════════════════════════════════ */
+
+.planner-page {
+  min-height: 100vh;
+  background: var(--color-gray-50);
+}
+
+/* ─── Header ────────────────────────────────────────────────── */
+.planner-header {
+  padding: calc(var(--header-height) + var(--space-10)) 0 var(--space-12);
+  text-align: center;
+}
+
+.planner-header__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-accent-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-5);
+}
+
+.planner-header__title {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: var(--space-2);
+}
+
+.planner-header__subtitle {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: var(--space-8);
+}
+
+/* ─── Progress Bar ──────────────────────────────────────────── */
+.planner-progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-10);
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.planner-progress__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  z-index: 2;
+}
+
+.planner-progress__dot {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: all var(--transition-base);
+  border: 2px solid transparent;
+}
+
+.planner-progress__step--active .planner-progress__dot {
+  background: var(--color-accent-500);
+  color: var(--color-white);
+  border-color: var(--color-accent-400);
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.3);
+}
+
+.planner-progress__step--completed .planner-progress__dot {
+  background: var(--color-success);
+  color: var(--color-white);
+}
+
+.planner-progress__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.planner-progress__step--active .planner-progress__label {
+  color: var(--color-white);
+}
+
+/* ─── Card Body ─────────────────────────────────────────────── */
+.planner-body {
+  margin-top: calc(-1 * var(--space-8));
+  padding-bottom: var(--space-16);
+  position: relative;
+  z-index: 3;
+}
+
+.planner-card {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--space-10);
+}
+
+/* ─── Steps ─────────────────────────────────────────────────── */
+.planner-step__title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-6);
+}
+
+.planner-step__title svg {
+  color: var(--color-primary-500);
+}
+
+.planner-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+}
+
+/* Quick picks */
+.quick-picks {
+  margin-top: var(--space-6);
+}
+
+.quick-picks__label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-3);
+}
+
+.quick-picks__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.quick-pick {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  background: var(--color-gray-50);
+  border: 1.5px solid var(--color-gray-200);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.quick-pick:hover {
+  border-color: var(--color-primary-300);
+  background: var(--color-primary-50);
+  color: var(--color-primary-600);
+}
+
+.quick-pick--active {
+  background: var(--color-primary-50);
+  border-color: var(--color-primary-400);
+  color: var(--color-primary-600);
+}
+
+/* Traveler counter */
+.traveler-counter {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+}
+
+.traveler-counter__btn {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: var(--color-gray-100);
+  border: 1px solid var(--color-gray-200);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.traveler-counter__btn:hover:not(:disabled) {
+  background: var(--color-primary-50);
+  border-color: var(--color-primary-300);
+  color: var(--color-primary-600);
+}
+
+.traveler-counter__btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.traveler-counter__value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  min-width: 40px;
+  text-align: center;
+}
+
+/* Budget presets */
+.budget-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.budget-preset {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  background: var(--color-gray-50);
+  border: 1.5px solid var(--color-gray-200);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.budget-preset:hover {
+  border-color: var(--color-primary-300);
+  background: var(--color-primary-50);
+  color: var(--color-primary-600);
+}
+
+.budget-preset--active {
+  background: var(--color-primary-50);
+  border-color: var(--color-primary-400);
+  color: var(--color-primary-600);
+}
+
+/* Interests */
+.interests-section {
+  margin-top: var(--space-6);
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.interest-chip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  background: var(--color-gray-50);
+  border: 1.5px solid var(--color-gray-200);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+  text-align: left;
+}
+
+.interest-chip__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: var(--chip-color);
+  flex-shrink: 0;
+}
+
+.interest-chip:hover {
+  border-color: var(--chip-color);
+  background: color-mix(in srgb, var(--chip-color) 8%, white);
+}
+
+.interest-chip--active {
+  border-color: var(--chip-color);
+  background: color-mix(in srgb, var(--chip-color) 10%, white);
+  color: var(--text-primary);
+  font-weight: 600;
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--chip-color) 20%, transparent);
+}
+
+/* Review */
+.review-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.review-item {
+  padding: var(--space-4);
+  background: var(--color-gray-50);
+  border-radius: var(--radius-lg);
+}
+
+.review-item--full {
+  grid-column: 1 / -1;
+}
+
+.review-item__label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-1);
+}
+
+.review-item__value {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.review-interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+/* Error */
+.planner-error {
+  margin-top: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: var(--radius-lg);
+  color: var(--color-error);
+  font-size: 0.9rem;
+}
+
+/* Navigation */
+.planner-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-gray-200);
+}
+
+/* ─── Responsive ────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .planner-card {
+    padding: var(--space-6);
+  }
+  .planner-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .interests-grid {
+    grid-template-columns: 1fr;
+  }
+  .review-grid {
+    grid-template-columns: 1fr;
+  }
+  .planner-progress {
+    gap: var(--space-6);
+  }
+}
+
+@media (max-width: 480px) {
+  .planner-header__title {
+    font-size: 1.75rem;
+  }
+  .planner-progress__label {
+    display: none;
+  }
+}

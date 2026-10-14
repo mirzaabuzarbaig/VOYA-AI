@@ -1,0 +1,749 @@
+/* ═══════════════════════════════════════════════════════════
+   Landing Page Styles — Immersive Travel Experience Theme
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── Hero ──────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #05140b;
+}
+
+.travel-slide {
+  width: 100%;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: calc(var(--header-height) + var(--space-12)) 0 var(--space-12);
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  background: rgba(5, 20, 11, 0.65);
+  border: 1px solid rgba(80, 200, 120, 0.35);
+  color: var(--color-cream);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: var(--space-6);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.hero__badge svg {
+  color: var(--color-rainforest-emerald);
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.75rem);
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.1;
+  margin-bottom: var(--space-6);
+  letter-spacing: -0.02em;
+}
+
+.hero__subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: #D6E4DE;
+  max-width: 640px;
+  margin: 0 auto var(--space-8);
+  line-height: 1.7;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.hero__cta {
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--color-rainforest-emerald) 0%, #3ca863 100%);
+  color: #05140b;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 0.9rem 2.2rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 8px 24px rgba(80, 200, 120, 0.35), 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: all var(--transition-base);
+}
+
+.hero__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(80, 200, 120, 0.5), 0 4px 10px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #63dca8 0%, #50C878 100%);
+}
+
+/* ─── Shared Section Headers & Badges ──────────────────────── */
+.text-center {
+  text-align: center;
+}
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-4);
+}
+
+.section-badge--forest {
+  background: rgba(80, 200, 120, 0.12);
+  color: var(--color-rainforest-emerald);
+  border: 1px solid rgba(80, 200, 120, 0.25);
+}
+
+.section-badge--sand {
+  background: #E8E0D2;
+  color: #2F4D3A;
+  border: 1px solid #D6CABA;
+}
+
+.section-badge--teal {
+  background: rgba(80, 200, 120, 0.15);
+  color: #5CE0B5;
+  border: 1px solid rgba(92, 224, 181, 0.3);
+}
+
+.section-title--dark {
+  color: var(--color-cream);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.section-subtitle--dark {
+  color: var(--text-dark-body);
+  font-size: 1.1rem;
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.section-title--sand {
+  color: var(--text-sand-title);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.section-subtitle--sand {
+  color: var(--text-sand-body);
+  font-size: 1.1rem;
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ─── Section 2: How It Works (Deep Forest Green Theme) ────── */
+.how-it-works {
+  background: linear-gradient(180deg, #071510 0%, #0D1C18 50%, #081612 100%);
+  border-top: 1px solid rgba(80, 200, 120, 0.12);
+  border-bottom: 1px solid rgba(80, 200, 120, 0.12);
+  position: relative;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-10);
+}
+
+.step-card--dark {
+  position: relative;
+  background: rgba(14, 32, 26, 0.72);
+  border: 1px solid rgba(80, 200, 120, 0.16);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8) var(--space-6);
+  text-align: center;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base);
+  overflow: hidden;
+}
+
+.step-card--dark:hover {
+  transform: translateY(-5px);
+  border-color: rgba(80, 200, 120, 0.45);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45), 0 0 20px rgba(80, 200, 120, 0.15);
+}
+
+.step-card__number {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-5);
+  font-size: 2.75rem;
+  font-weight: 900;
+  color: rgba(255, 253, 208, 0.08);
+  line-height: 1;
+  font-family: var(--font-display);
+  pointer-events: none;
+}
+
+.step-card__icon {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, rgba(80, 200, 120, 0.25), rgba(79, 121, 66, 0.45));
+  color: var(--color-rainforest-emerald);
+  border: 1px solid rgba(80, 200, 120, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-5);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.step-card__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FAF7F2;
+  margin-bottom: var(--space-2);
+}
+
+.step-card__desc {
+  font-size: 0.925rem;
+  color: #9DB5AC;
+  line-height: 1.6;
+}
+
+/* ─── Section 3: Features & Scenic Panel (Warm Sand Theme) ──── */
+.features-section {
+  background: linear-gradient(180deg, #F5EFEB 0%, #EDE5D8 100%);
+  position: relative;
+  color: var(--text-sand-title);
+  border-bottom: 1px solid #D8CDBC;
+}
+
+.features-showcase-split {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--space-8);
+  align-items: center;
+  margin-top: var(--space-10);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+
+.feature-card--sand {
+  background: #FAF7F2;
+  border: 1px solid #E2D9CE;
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  box-shadow: 0 4px 18px rgba(45, 35, 25, 0.05);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.feature-card--sand:hover {
+  transform: translateY(-4px);
+  border-color: #CFC4B4;
+  box-shadow: 0 12px 28px rgba(45, 35, 25, 0.12);
+}
+
+.feature-card__icon--sand {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-lg);
+  background: #EAE3D8;
+  color: #2D5838;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-card__title--sand {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-sand-title);
+}
+
+.feature-card__desc--sand {
+  font-size: 0.925rem;
+  color: var(--text-sand-body);
+  line-height: 1.6;
+}
+
+/* Scenic visual panel */
+.features-scenic-panel {
+  position: relative;
+  height: 100%;
+  min-height: 420px;
+}
+
+.features-scenic-panel__image-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(40, 30, 20, 0.15);
+  border: 1px solid #DFD5C7;
+}
+
+.features-scenic-panel__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.features-scenic-panel:hover .features-scenic-panel__image {
+  transform: scale(1.04);
+}
+
+.features-scenic-panel__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(14, 30, 24, 0.1) 0%, rgba(14, 30, 24, 0.45) 50%, rgba(8, 20, 15, 0.9) 100%);
+}
+
+.features-scenic-panel__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-6);
+  z-index: 2;
+  color: #FFFFFF;
+}
+
+.features-scenic-panel__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-full);
+  background: rgba(6, 20, 15, 0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(80, 200, 120, 0.35);
+  color: var(--color-cream);
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+}
+
+.features-scenic-panel__title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: var(--space-2);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.features-scenic-panel__desc {
+  font-size: 0.9rem;
+  color: #E2ECE7;
+  line-height: 1.5;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ─── Section 4: Scenic Travel Interlude Banner ─────────────── */
+.scenic-interlude {
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  border-top: 1px solid rgba(80, 200, 120, 0.15);
+  border-bottom: 1px solid rgba(80, 200, 120, 0.15);
+}
+
+.scenic-interlude__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.scenic-interlude__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(1.1);
+}
+
+.scenic-interlude__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 18, 14, 0.82) 0%, rgba(9, 26, 20, 0.68) 50%, rgba(6, 18, 14, 0.88) 100%);
+  backdrop-filter: blur(1px);
+}
+
+.scenic-interlude__content {
+  position: relative;
+  z-index: 2;
+  padding: var(--space-12) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.scenic-interlude__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-full);
+  background: rgba(6, 20, 15, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(80, 200, 120, 0.35);
+  color: var(--color-cream);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.scenic-interlude__quote {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3.2vw, 2.35rem);
+  color: #FFFDD0;
+  font-style: italic;
+  max-width: 820px;
+  line-height: 1.45;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+
+.scenic-interlude__pills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-top: var(--space-2);
+}
+
+.scenic-interlude__pill {
+  padding: 0.4rem 1.1rem;
+  border-radius: var(--radius-full);
+  background: rgba(10, 28, 22, 0.65);
+  border: 1px solid rgba(80, 200, 120, 0.25);
+  color: #DDEEE7;
+  font-size: 0.85rem;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
+
+/* ─── Section 5: Trending Trips (Deep Oceanic Teal Theme) ───── */
+.destinations-section {
+  background: linear-gradient(180deg, #071518 0%, #0A2228 50%, #061417 100%);
+  position: relative;
+  border-top: 1px solid rgba(80, 200, 120, 0.12);
+}
+
+.destinations-tabs--teal {
+  margin-top: var(--space-6);
+  display: inline-flex;
+  gap: var(--space-2);
+  background: rgba(12, 34, 38, 0.85);
+  padding: var(--space-1);
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(80, 200, 120, 0.2);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.dest-tab-btn--teal {
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #A0BDB8;
+  background: transparent;
+  transition: all var(--transition-fast);
+}
+
+.dest-tab-btn--teal:hover {
+  color: #FFFFFF;
+}
+
+.dest-tab-btn--teal-active {
+  background: var(--color-rainforest-emerald) !important;
+  color: #071714 !important;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(80, 200, 120, 0.35);
+}
+
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-10);
+}
+
+.dest-card--dark {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: #0E272B;
+  border: 1px solid rgba(80, 200, 120, 0.18);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.dest-card--dark:hover {
+  transform: translateY(-6px);
+  border-color: rgba(80, 200, 120, 0.45);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 24px rgba(80, 200, 120, 0.2);
+}
+
+.dest-card__image-wrap {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.dest-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.dest-card--dark:hover .dest-card__image {
+  transform: scale(1.06);
+}
+
+.dest-card__overlay--dark {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(14, 39, 43, 0.95) 0%, rgba(14, 39, 43, 0.3) 50%, transparent 100%);
+}
+
+.dest-card__type-tag--dark {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  padding: 4px var(--space-3);
+  border-radius: var(--radius-full);
+  background: rgba(6, 20, 24, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(80, 200, 120, 0.35);
+  color: var(--color-cream);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dest-card__info--dark {
+  padding: var(--space-5);
+  background: #0E272B;
+}
+
+.dest-card__name--dark {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: var(--space-1);
+}
+
+.dest-card__tagline--dark {
+  font-size: 0.875rem;
+  color: #9CBAB5;
+  margin-bottom: var(--space-4);
+  line-height: 1.5;
+}
+
+.dest-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dest-card__price--dark {
+  font-size: 0.925rem;
+  font-weight: 700;
+  color: var(--color-rainforest-emerald);
+}
+
+.dest-card__season--dark {
+  font-size: 0.78rem;
+  color: #C5DDD8;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+}
+
+/* ─── Section 6: Final CTA (Full-Width Scenic Overlay) ──────── */
+.cta-banner {
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-20) 0;
+  border-top: 1px solid rgba(80, 200, 120, 0.25);
+  border-bottom: 1px solid rgba(80, 200, 120, 0.25);
+}
+
+.cta-banner__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.cta-banner__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  filter: saturate(1.15);
+}
+
+.cta-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(6, 20, 16, 0.92) 0%, rgba(10, 32, 25, 0.84) 50%, rgba(4, 14, 11, 0.96) 100%);
+  backdrop-filter: blur(1px);
+}
+
+.cta-banner__inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+}
+
+.cta-banner__content {
+  max-width: 680px;
+}
+
+.cta-banner__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-rainforest-emerald);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-3);
+}
+
+.cta-banner__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 2.85rem);
+  font-weight: 700;
+  color: var(--color-cream);
+  line-height: 1.2;
+  margin-bottom: var(--space-3);
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.cta-banner__subtitle {
+  font-size: 1.1rem;
+  color: #C8DDD6;
+  line-height: 1.6;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.cta-banner__btn {
+  white-space: nowrap;
+  background: linear-gradient(135deg, var(--color-rainforest-emerald) 0%, #3ca863 100%);
+  color: #05140b;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 0.9rem 2.2rem;
+  border-radius: var(--radius-full);
+  box-shadow: 0 8px 28px rgba(80, 200, 120, 0.4), 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: all var(--transition-base);
+}
+
+.cta-banner__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(80, 200, 120, 0.55), 0 4px 12px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #63dca8 0%, #50C878 100%);
+}
+
+/* ─── Responsive Adjustments ────────────────────────────────── */
+@media (max-width: 1024px) {
+  .features-showcase-split {
+    grid-template-columns: 1fr;
+  }
+  .features-scenic-panel {
+    min-height: 320px;
+  }
+  .features-scenic-panel__image-wrap {
+    min-height: 320px;
+  }
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .cta-banner__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cta-banner__content {
+    text-align: center;
+  }
+  .scenic-interlude__quote {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+  .destinations-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero__actions {
+    flex-direction: column;
+  }
+  .hero__actions .btn {
+    width: 100%;
+  }
+  .destinations-tabs--teal {
+    flex-direction: column;
+    width: 100%;
+  }
+}

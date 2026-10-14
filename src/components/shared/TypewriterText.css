@@ -1,0 +1,41 @@
+/* ═══════════════════════════════════════════════════════════
+   TypewriterText Component Styles
+   ═══════════════════════════════════════════════════════════ */
+
+.typewriter {
+  display: inline-block;
+  width: 100%;
+}
+
+/* Each line is a block element with min-height = 1 line height.
+   This guarantees that subsequent lines already have their vertical space
+   reserved from the moment the page loads, completely preventing any
+   layout jump or cumulative layout shift (CLS). */
+.typewriter__line {
+  display: block;
+  min-height: 1.15em;
+  line-height: inherit;
+}
+
+/* ─── Blinking Cursor ────────────────────────────────────────── */
+.typewriter__cursor {
+  display: inline-block;
+  font-weight: 300;
+  font-family: inherit;
+  margin-left: 3px;
+  color: var(--color-accent-400);
+  -webkit-text-fill-color: var(--color-accent-400); /* Overrides parent gradient-text */
+  background: none;
+  animation: typewriter-blink 0.75s step-end infinite;
+  vertical-align: baseline;
+  user-select: none;
+}
+
+@keyframes typewriter-blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
